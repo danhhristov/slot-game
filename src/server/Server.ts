@@ -23,7 +23,7 @@ export class Server {
 	}
 
 	bet(request: TBetRequest): TBetResponse {
-		const userBalance = this._db.getUserBalance(request.userId)
+		const userBalance = this._db.collectPendingWinnings(request.userId)
 
 		if (request.betAmount > userBalance) {
 			return {
@@ -90,7 +90,7 @@ export class Server {
 			let matchingSymbols = 1
 
 			for (let j = 1; j < reelData.length; j++) {
-				if (reel[i] === symbol) {
+				if (reelData[j][i] === symbol) {
 					matchingSymbols++
 				} else {
 					j = reelData.length
@@ -110,14 +110,14 @@ export class Server {
 	}
 
 	private generateSpinResult(): number[][] {
-		const rows = 3
-		const cols = 5
+		const reels = 5
+		const rows = 5
 		const symbols = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] // Example symbols
 		const result: number[][] = []
 
-		for (let i = 0; i < rows; i++) {
+		for (let i = 0; i < reels; i++) {
 			const row: number[] = []
-			for (let j = 0; j < cols; j++) {
+			for (let j = 0; j < rows; j++) {
 				row.push(symbols[Math.floor(Math.random() * symbols.length)])
 			}
 			result.push(row)
