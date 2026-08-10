@@ -1,0 +1,19 @@
+topwin.png
+size: 277,145
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 0, 0
+  size: 145, 145
+  orig: 145, 145
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 145, 0
+  size: 132, 39
+  orig: 132, 39
+  offset: 0, 0
+  index: -1

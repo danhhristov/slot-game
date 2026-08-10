@@ -1,0 +1,19 @@
+inbet.png
+size: 276,145
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 0, 0
+  size: 145, 145
+  orig: 145, 145
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 145, 0
+  size: 131, 40
+  orig: 131, 40
+  offset: 0, 0
+  index: -1

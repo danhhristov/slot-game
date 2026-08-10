@@ -1,0 +1,19 @@
+palmsbet.png
+size: 274,145
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bg
+  rotate: false
+  xy: 0, 0
+  size: 145, 145
+  orig: 145, 145
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 145, 0
+  size: 129, 25
+  orig: 129, 25
+  offset: 0, 0
+  index: -1
